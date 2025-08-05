@@ -1,0 +1,147 @@
+/* Reset Styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu,
+nav, output, ruby, section, summary, time,
+mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    background-color: #60a9ff;
+    font-family: system-ui, sans-serif;
+}
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote::before, blockquote::after,
+q::before, q::after { content: ''; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+html { box-sizing: border-box; }
+
+/* Panel Container */
+.panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;  /* stack on small screens */
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+
+/* Pricing Plan Cards */
+.pricing-plan {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;            /* center horizontally */
+    justify-content: space-between; /* evenly distribute vertically */
+    min-height: 400px;              /* ensures equal height */
+    border-bottom: 1px solid grey;
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+/* Plan Images */
+.pricing-image {
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Plan Headers */
+.pricing-header {
+    margin: 15px 0;
+    font-size: 1.3rem;
+}
+
+/* Features */
+.pricing-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid grey;
+}
+
+.pricing-features-item:last-child {
+    border-bottom: 1px solid grey;
+}
+
+/* Price Styling */
+.pricing-price {
+    color: rgb(156, 117, 8);
+    font-size: 35px;
+    display: block;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+/* Buttons */
+.pricing-button {
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+}
+.pricing-button:hover,
+.pricing-button:focus {
+    background-color:rgb(156, 117, 8);
+    color: white;
+}
+.pricing-button.is-featured {
+    background-color: orange;
+    color: white;
+}
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+    background-color: silver;
+    color: white;
+}
+
+/* Responsive Layout */
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;        
+        align-items: stretch;       
+    }
+
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid grey;
+        padding: 25px 50px;
+    }
+
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+}
